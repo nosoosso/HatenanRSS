@@ -27,9 +27,15 @@ object XmlUtil {
   }
 
   private[this] def fixUrl(url: String): String = {
-    if (!url.startsWith("http://")) throw new IllegalArgumentException("http://で始まらないurlが渡された -> " + url)
 
-    val noProtocol = url.drop(7)
-    "http://b.hatena.ne.jp/entry/" + noProtocol
+      if (url.startsWith("http://")) {
+        val noProtocol = url.drop(7)
+        "http://b.hatena.ne.jp/entry/" + noProtocol
+      } else if (url.startsWith("https://")) {
+        val noProtocol = url.drop(8)
+        "http://b.hatena.ne.jp/entry/s/" + noProtocol
+      }else{
+        url
+      }
   }
 }

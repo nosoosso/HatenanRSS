@@ -17,9 +17,6 @@ class MyScalatraServlet extends HatenanrssStack {
         try {
           val contents = xml.XML.load(new URL(rssUrl))
 
-          if (contents.size > 1000)
-            redirect("/")
-
           val fixedContents = XmlUtil.fixLinkTag(contents)
 
 

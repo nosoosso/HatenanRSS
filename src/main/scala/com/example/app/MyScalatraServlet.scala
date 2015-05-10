@@ -3,8 +3,9 @@ package com.example.app
 import java.net.URL
 
 import org.scalatra._
+import org.scalatra.scalate.ScalateSupport
 
-class MyScalatraServlet extends HatenanrssStack {
+class MyScalatraServlet extends HatenanrssStack with ScalateSupport {
 
   notFound {
     "404 Not Found"
@@ -28,16 +29,7 @@ class MyScalatraServlet extends HatenanrssStack {
   }
 
   get("/") {
-    val action = url("rss")
-
-    <html>
-      <body>
-        <h1>RSSのURLを入れてね</h1>
-        <form action={action} method="get">
-          <input type="text" name="rssUrl"/>
-          <input type="submit" value="送信"/>
-        </form>
-      </body>
-    </html>
+    contentType = "text/html"
+    ssp("/index", "url" -> url("rss"))
   }
 }

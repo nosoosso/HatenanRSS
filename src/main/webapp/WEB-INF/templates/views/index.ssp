@@ -1,0 +1,7 @@
+<%@ val url:String  %>
+
+<h1>RSSのURLを入れてね</h1>
+<form action=<%= url %> method="get">
+<input type="text" name="rssUrl"/>
+<input type="submit" value="送信"/>
+</form>

@@ -23,7 +23,7 @@ class MyScalatraServlet extends HatenanrssStack with ScalateSupport {
 
           ActionResult(ResponseStatus(200), fixedContents, Map("Content-type" -> "text/xml"))
         } catch {
-          case e: Throwable => redirect("/")
+          case e: Throwable => halt(400, "Error:\n" + e.getMessage)
         }
     }
   }

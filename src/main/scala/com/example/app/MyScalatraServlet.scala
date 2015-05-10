@@ -20,8 +20,7 @@ class MyScalatraServlet extends HatenanrssStack with ScalateSupport {
 
           val fixedContents = XmlUtil.fixLinkTag(contents)
 
-
-          ActionResult(ResponseStatus(200), fixedContents, Map("Content-type" -> "text/xml"))
+          Ok(fixedContents,Map("Content-type" -> "text/xml"))
         } catch {
           case e: Throwable => halt(400, "Error:\n" + e.getMessage)
         }

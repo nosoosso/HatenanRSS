@@ -2,7 +2,7 @@
 
 ## これは何
 
-登録したRSSのlinkタグのURLをはてなブックマークのURL(http://b.hatena.ne.jp/entry/--------- みたいな形式)に変換して新しいRSSを発行します。
+登録したRSSのlinkタグのURLをはてなブックマークのURL(http://b.hatena.ne.jp/entry/www.google.co.jp/ みたいな形式)に変換して新しいRSSを発行します。
 
 例えば、はてなブックマークの人気エントリのRSSを登録すれば、RSSリーダーからクリックしたときにそのURLのはてなブックマークに直接飛ぶことができます。
 

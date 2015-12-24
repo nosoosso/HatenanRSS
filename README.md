@@ -1,12 +1,9 @@
 # HatenanRSS #
 
-## Build & Run ##
+## これは何
 
-```sh
-$ cd HatenanRSS
-$ ./sbt
-> container:start
-> browse
-```
+登録したRSSのlinkタグのURLをはてなブックマークのURL(http://b.hatena.ne.jp/entry/--------- みたいな形式)に変換して新しいRSSを発行します。
 
-If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
+例えば、はてなブックマークの人気エントリのRSSを登録すれば、RSSリーダーからクリックしたときにそのURLのはてなブックマークに直接飛ぶことができます。
+
+https://hatenan-rss.herokuapp.com/ <- ここで試すことができますが、Herokuの無料プランなので動いてない場合もあります。
